@@ -16,99 +16,18 @@
         }
     </script>
 
-    <!-- CSS Mode Terang -->
     <style>
         html {
             scroll-behavior: smooth;
         }
-
-        html:not(.dark) body {
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-
-        html:not(.dark) nav,
-        html:not(.dark) footer,
-        html:not(.dark) #features {
-            background-color: #e2e8f0 !important;
-            border-color: #cbd5e1 !important;
-        }
-
-        html:not(.dark) .bg-slate-950 {
-            background-color: #f8fafc !important;
-        }
-
-        html:not(.dark) .bg-slate-900 {
-            background-color: #e2e8f0 !important;
-        }
-
-        html:not(.dark) .bg-slate-800 {
-            background-color: #cbd5e1 !important;
-        }
-
-        html:not(.dark) .text-slate-100,
-        html:not(.dark) .text-slate-300 {
-            color: #1e293b !important;
-        }
-
-        html:not(.dark) .text-slate-400,
-        html:not(.dark) .text-slate-500 {
-            color: #475569 !important;
-        }
-
-        html:not(.dark) .border-slate-800,
-        html:not(.dark) .border-slate-700 {
-            border-color: #cbd5e1 !important;
-        }
-
-        html:not(.dark) .hover\:bg-slate-800:hover {
-            background-color: #cbd5e1 !important;
-        }
-
-        html:not(.dark) .bg-indigo-900 {
-            background-color: #dbeafe !important;
-        }
-
-        html:not(.dark) .text-indigo-200 {
-            color: #1e40af !important;
-        }
-
-        html:not(.dark) .text-indigo-300 {
-            color: #1e40af !important;
-        }
-
-        html:not(.dark) .bg-purple-900 {
-            background-color: #ede9fe !important;
-        }
-
-        html:not(.dark) .bg-pink-900 {
-            background-color: #fce7f3 !important;
-        }
-
-        html:not(.dark) .bg-gradient-to-br {
-            background-image: linear-gradient(to bottom right, #dbeafe, #e2e8f0, #ede9fe) !important;
-        }
-
-        html:not(.dark) .border-indigo-800 {
-            border-color: #c7d2fe !important;
-        }
-
-        html:not(.dark) .border-indigo-500 {
-            border-color: #6366f1 !important;
-        }
-
-        html:not(.dark) .text-green-400 {
-            color: #15803d !important;
-        }
     </style>
-
 
 </head>
 
-<body class="bg-slate-950 text-slate-100 font-sans transition duration-300">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition duration-300">
 
     <!-- 1. NAVBAR -->
-    <nav class="sticky top-0 z-50 bg-slate-900 border-b border-slate-800">
+    <nav class="sticky top-0 z-50 bg-slate-200 dark:bg-slate-900 border-b border-slate-300 dark:border-slate-800">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 
@@ -125,13 +44,13 @@
 
                     <!-- Dark Mode -->
                     <button id="themeButton" onclick="toggleTheme()"
-                        class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700">
+                        class="px-3 py-2 rounded-lg bg-slate-300 dark:bg-slate-800 hover:bg-slate-400 dark:hover:bg-slate-700">
                         ☀
                     </button>
 
                     <!-- Burger -->
                     <button onclick="document.getElementById('menu').classList.toggle('hidden')"
-                        class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700">
+                        class="px-3 py-2 rounded-lg bg-slate-300 dark:bg-slate-800 hover:bg-slate-400 dark:hover:bg-slate-700">
                         ☰
                     </button>
 
@@ -147,7 +66,7 @@
 
             <!-- Menu Dropdown ke Bawah -->
             <div id="menu"
-                class="hidden flex flex-col gap-4 mt-4 p-4 bg-slate-800 rounded-xl text-sm text-slate-300">
+                class="hidden flex flex-col gap-4 mt-4 p-4 bg-slate-300 dark:bg-slate-800 rounded-xl text-sm text-slate-800 dark:text-slate-300">
 
                 <a href="#hero" class="hover:text-indigo-400">
                     Beranda
@@ -166,6 +85,7 @@
         </div>
     </nav>
 
+
     <!-- 2. HERO SECTION -->
     <section id="hero" class="max-w-7xl mx-auto px-4 py-20 lg:py-28">
 
@@ -174,7 +94,7 @@
             <!-- Teks Hero -->
             <div>
 
-                <span class="inline-block bg-indigo-900 text-indigo-300 px-4 py-2 rounded-full text-sm mb-6">
+                <span class="inline-block bg-blue-100 dark:bg-indigo-900 text-blue-800 dark:text-indigo-300 px-4 py-2 rounded-full text-sm mb-6">
                     Generasi Baru Kecerdasan Buatan
                 </span>
 
@@ -185,7 +105,7 @@
                     </span>
                 </h2>
 
-                <p class="text-slate-400 leading-relaxed mb-8">
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
                     Tingkatkan produktivitas tim hingga 10x lipat menggunakan platform asisten berbasis AI yang cepat, aman, dan mudah diintegrasikan.
                 </p>
 
@@ -198,7 +118,7 @@
                     </a>
 
                     <a href="#features"
-                        class="text-center border border-slate-700 hover:bg-slate-800 px-6 py-3 rounded-xl font-medium">
+                        class="text-center border border-slate-300 dark:border-slate-700 hover:bg-slate-300 dark:hover:bg-slate-800 px-6 py-3 rounded-xl font-medium">
                         Pelajari Fitur
                     </a>
 
@@ -208,9 +128,9 @@
 
 
             <!-- Visual Hero -->
-            <div class="bg-gradient-to-br from-indigo-900 via-slate-800 to-purple-900 rounded-3xl p-8 border border-indigo-800">
+            <div class="bg-gradient-to-br from-blue-100 via-slate-200 to-violet-100 dark:from-indigo-900 dark:via-slate-800 dark:to-purple-900 rounded-3xl p-8 border border-indigo-200 dark:border-indigo-800">
 
-                <div class="bg-slate-900 rounded-2xl p-6">
+                <div class="bg-slate-200 dark:bg-slate-900 rounded-2xl p-6">
 
                     <div class="flex items-center gap-3 mb-6">
 
@@ -220,26 +140,26 @@
 
                         <div>
                             <h3 class="font-bold text-lg">TechNova AI</h3>
-                            <p class="text-sm text-slate-400">AI Assistant</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">AI Assistant</p>
                         </div>
 
                     </div>
 
-                    <div class="bg-slate-800 p-4 rounded-xl mb-4">
-                        <p class="text-sm text-slate-300">
+                    <div class="bg-slate-300 dark:bg-slate-800 p-4 rounded-xl mb-4">
+                        <p class="text-sm text-slate-800 dark:text-slate-300">
                             Halo! Saya asisten AI yang siap membantu pekerjaan Anda.
                         </p>
                     </div>
 
-                    <div class="bg-indigo-900 p-4 rounded-xl mb-6">
-                        <p class="text-sm text-indigo-200">
+                    <div class="bg-blue-100 dark:bg-indigo-900 p-4 rounded-xl mb-6">
+                        <p class="text-sm text-blue-800 dark:text-indigo-200">
                             Membantu mengolah data, menjawab pertanyaan, dan meningkatkan produktivitas.
                         </p>
                     </div>
 
-                    <div class="flex justify-between items-center text-sm text-slate-400">
+                    <div class="flex justify-between items-center text-sm text-slate-600 dark:text-slate-400">
                         <span>AI System</span>
-                        <span class="text-green-400">● Online</span>
+                        <span class="text-green-700 dark:text-green-400">● Online</span>
                     </div>
 
                 </div>
@@ -249,8 +169,9 @@
         </div>
     </section>
 
+
     <!-- 3. FEATURE SECTION -->
-    <section id="features" class="bg-slate-900 py-20 border-y border-slate-800">
+    <section id="features" class="bg-slate-200 dark:bg-slate-900 py-20 border-y border-slate-300 dark:border-slate-800">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -265,20 +186,21 @@
                     Keunggulan Utama
                 </h2>
 
-                <p class="text-slate-400 max-w-2xl mx-auto">
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                     Dirancang khusus untuk mendukung fleksibilitas kerja tim modern.
                 </p>
 
             </div>
+
 
             <!-- Grid Card -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
 
                 <!-- Card 1 -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-2xl hover:border-indigo-500 transition">
+                <div class="bg-slate-300 dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 p-6 rounded-2xl hover:border-indigo-500 transition">
 
-                    <div class="w-14 h-14 bg-indigo-900 rounded-xl flex items-center justify-center text-3xl mb-5">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-indigo-900 rounded-xl flex items-center justify-center text-3xl mb-5">
                         ⚡
                     </div>
 
@@ -286,7 +208,7 @@
                         Pemrosesan Kilat
                     </h3>
 
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                         Sistem merespons kueri dan analisis data secara real-time dalam hitungan milidetik.
                     </p>
 
@@ -294,9 +216,9 @@
 
 
                 <!-- Card 2 -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-2xl hover:border-indigo-500 transition">
+                <div class="bg-slate-300 dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 p-6 rounded-2xl hover:border-indigo-500 transition">
 
-                    <div class="w-14 h-14 bg-purple-900 rounded-xl flex items-center justify-center text-3xl mb-5">
+                    <div class="w-14 h-14 bg-violet-100 dark:bg-purple-900 rounded-xl flex items-center justify-center text-3xl mb-5">
                         🔒
                     </div>
 
@@ -304,7 +226,7 @@
                         Keamanan Tinggi
                     </h3>
 
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                         Data pribadi dan bisnis kamu terenkripsi end-to-end tanpa risiko kebocoran data.
                     </p>
 
@@ -312,9 +234,9 @@
 
 
                 <!-- Card 3 -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-2xl hover:border-indigo-500 transition">
+                <div class="bg-slate-300 dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 p-6 rounded-2xl hover:border-indigo-500 transition">
 
-                    <div class="w-14 h-14 bg-pink-900 rounded-xl flex items-center justify-center text-3xl mb-5">
+                    <div class="w-14 h-14 bg-pink-100 dark:bg-pink-900 rounded-xl flex items-center justify-center text-3xl mb-5">
                         🔗
                     </div>
 
@@ -322,7 +244,7 @@
                         Integrasi API
                     </h3>
 
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                         Mudah dihubungkan dengan berbagai aplikasi kerja seperti Slack, Notion, dan GitHub.
                     </p>
 
@@ -332,6 +254,7 @@
 
         </div>
     </section>
+
 
     <!-- 4. PRICING SECTION -->
     <section id="pricing" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -347,7 +270,7 @@
                 Pilih Paket Langganan
             </h2>
 
-            <p class="text-slate-400">
+            <p class="text-slate-600 dark:text-slate-400">
                 Harga transparan tanpa biaya tersembunyi.
             </p>
 
@@ -359,13 +282,13 @@
 
 
             <!-- Paket Starter -->
-            <div class="bg-slate-900 border border-slate-700 p-8 rounded-2xl">
+            <div class="bg-slate-200 dark:bg-slate-900 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 p-8 rounded-2xl">
 
                 <h3 class="text-xl font-bold mb-2">
                     Starter
                 </h3>
 
-                <p class="text-slate-400 text-sm">
+                <p class="text-slate-600 dark:text-slate-400 text-sm">
                     Cocok untuk penggunaan individu.
                 </p>
 
@@ -375,20 +298,20 @@
                         Rp 99.000
                     </span>
 
-                    <span class="text-slate-400">
+                    <span class="text-slate-600 dark:text-slate-400">
                         /bulan
                     </span>
 
                 </div>
 
-                <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-300 mb-8">
                     <li>✓ 10.000 Request AI / bulan</li>
                     <li>✓ Akses Model Dasar</li>
                     <li>✓ Dukungan Komunitas</li>
                 </ul>
 
                 <a href="#"
-                    class="block text-center border border-indigo-500 text-indigo-400 hover:bg-indigo-900 py-3 rounded-xl">
+                    class="block text-center border border-indigo-500 text-indigo-400 hover:bg-blue-100 dark:hover:bg-indigo-900 py-3 rounded-xl">
                     Pilih Starter
                 </a>
 
@@ -396,7 +319,7 @@
 
 
             <!-- Paket Pro -->
-            <div class="bg-slate-900 border-2 border-indigo-500 p-8 rounded-2xl relative">
+            <div class="bg-slate-200 dark:bg-slate-900 text-slate-800 dark:text-white border-2 border-indigo-500 p-8 rounded-2xl relative">
 
                 <span class="absolute top-4 right-4 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">
                     Populer
@@ -406,7 +329,7 @@
                     Pro Business
                 </h3>
 
-                <p class="text-slate-400 text-sm">
+                <p class="text-slate-600 dark:text-slate-400 text-sm">
                     Ideal untuk tim dan bisnis berkembang.
                 </p>
 
@@ -416,13 +339,13 @@
                         Rp 299.000
                     </span>
 
-                    <span class="text-slate-400">
+                    <span class="text-slate-600 dark:text-slate-400">
                         /bulan
                     </span>
 
                 </div>
 
-                <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-300 mb-8">
                     <li>✓ Unlimited Request AI</li>
                     <li>✓ Akses Model Pro Tercepat</li>
                     <li>✓ Integrasi API & Prioritas Support</li>
@@ -438,95 +361,97 @@
         </div>
     </section>
 
+
+
     <!-- 5. FOOTER -->
-<footer class="bg-slate-900 border-t border-slate-800 py-12">
+    <footer class="bg-slate-200 dark:bg-slate-900 border-t border-slate-300 dark:border-slate-800 py-12">
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <!-- Informasi Startup -->
-            <div>
+                <!-- Informasi Startup -->
+                <div>
 
-                <h2 class="text-xl font-bold text-indigo-400 mb-3">
-                    TechNova.AI
-                </h2>
+                    <h2 class="text-xl font-bold text-indigo-400 mb-3">
+                        TechNova.AI
+                    </h2>
 
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Platform asisten berbasis kecerdasan buatan
-                    untuk membantu meningkatkan produktivitas
-                    kerja secara cepat, aman, dan efisien.
-                </p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Platform asisten berbasis kecerdasan buatan
+                        untuk membantu meningkatkan produktivitas
+                        kerja secara cepat, aman, dan efisien.
+                    </p>
 
-            </div>
+                </div>
 
-            <!-- Informasi Kontak -->
-            <div>
+                <!-- Informasi Kontak -->
+                <div>
 
-                <h3 class="font-bold mb-4">
-                    Kontak Kami
-                </h3>
+                    <h3 class="font-bold mb-4">
+                        Kontak Kami
+                    </h3>
 
-                <div class="space-y-3 text-sm text-slate-400">
+                    <div class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
 
-                    <p>
-                        📧 Email:
-                        <a href="mailto:haristmuhdy@gmail.com"
+                        <p>
+                            📧 Email:
+                            <a href="mailto:haristmuhdy@gmail.com"
+                                class="hover:text-indigo-400">
+                                haristmuhdy@gmail.com
+                            </a>
+                        </p>
+
+                        <p>
+                            📞 Telepon: +62 812-6787-5069
+                        </p>
+
+                        <p>
+                            📍 Lokasi: Sekolah Menengah Kejuruan Negeri 9 Medan, Jl. Patriot No.20 A, Lalang, Kec. Medan Sunggal, Kota Medan, Sumatera Utara 20123
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Media Sosial -->
+                <div>
+
+                    <h3 class="font-bold mb-4">
+                        Media Sosial
+                    </h3>
+
+                    <div class="flex flex-col gap-3 text-sm text-slate-600 dark:text-slate-400">
+
+                        <a href="https://www.instagram.com/muhdy12_4?hvrq=MTRlZ3kwcWcwcWszcQ=="
+                            target="_blank"
                             class="hover:text-indigo-400">
-                            haristmuhdy@gmail.com
+                            Instagram
                         </a>
-                    </p>
 
-                    <p>
-                        📞 Telepon: +62 812-6787-5069
-                    </p>
+                        <a href="https://www.tiktok.com/@muhdy12_4?_r=1&_t=ZS-9BhbX2vFn6n"
+                            target="_blank"
+                            class="hover:text-indigo-400">
+                            Tiktok
+                        </a>
 
-                    <p>
-                        📍 Lokasi: Sekolah Menengah Kejuruan Negeri 9 Medan, Jl. Patriot No.20 A, Lalang, Kec. Medan Sunggal, Kota Medan, Sumatera Utara 20123
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- Media Sosial -->
-            <div>
-
-                <h3 class="font-bold mb-4">
-                    Media Sosial
-                </h3>
-
-                <div class="flex flex-col gap-3 text-sm text-slate-400">
-
-                    <a href="https://www.instagram.com/muhdy12_4?hvrq=MTRlZ3kwcWcwcWszcQ=="
-                        target="_blank"
-                        class="hover:text-indigo-400">
-                        Instagram
-                    </a>
-
-                   
-                    <a href="https://www.tiktok.com/@muhdy12_4?_r=1&_t=ZS-9BhbX2vFn6n"
-                        target="_blank"
-                        class="hover:text-indigo-400">
-                        Tiktok
-                    </a>
+                    </div>
 
                 </div>
 
             </div>
 
+            <!-- Copyright -->
+            <div class="border-t border-slate-300 dark:border-slate-800 mt-8 pt-6 text-center text-sm text-slate-600 dark:text-slate-500">
+
+                &copy; 2026 TechNova Startup Inc. All rights reserved.
+
+            </div>
+
         </div>
+    </footer>
 
-        <!-- Copyright -->
-        <div class="border-t border-slate-800 mt-8 pt-6 text-center text-sm text-slate-500">
 
-            &copy; 2026 TechNova Startup Inc.
-            All rights reserved.
-
-        </div>
-
-    </div>
-</footer>
 
     <!-- JAVASCRIPT -->
     <script>
@@ -544,7 +469,6 @@
         }
 
     </script>
-
 
 </body>
 </html>
