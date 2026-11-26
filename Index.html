@@ -9,6 +9,99 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Konfigurasi Dark Mode -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+
+    <!-- CSS Mode Terang -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html:not(.dark) body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        html:not(.dark) nav,
+        html:not(.dark) footer,
+        html:not(.dark) #features {
+            background-color: #e2e8f0 !important;
+            border-color: #cbd5e1 !important;
+        }
+
+        html:not(.dark) .bg-slate-950 {
+            background-color: #f8fafc !important;
+        }
+
+        html:not(.dark) .bg-slate-900 {
+            background-color: #e2e8f0 !important;
+        }
+
+        html:not(.dark) .bg-slate-800 {
+            background-color: #cbd5e1 !important;
+        }
+
+        html:not(.dark) .text-slate-100,
+        html:not(.dark) .text-slate-300 {
+            color: #1e293b !important;
+        }
+
+        html:not(.dark) .text-slate-400,
+        html:not(.dark) .text-slate-500 {
+            color: #475569 !important;
+        }
+
+        html:not(.dark) .border-slate-800,
+        html:not(.dark) .border-slate-700 {
+            border-color: #cbd5e1 !important;
+        }
+
+        html:not(.dark) .hover\:bg-slate-800:hover {
+            background-color: #cbd5e1 !important;
+        }
+
+        html:not(.dark) .bg-indigo-900 {
+            background-color: #dbeafe !important;
+        }
+
+        html:not(.dark) .text-indigo-200 {
+            color: #1e40af !important;
+        }
+
+        html:not(.dark) .text-indigo-300 {
+            color: #1e40af !important;
+        }
+
+        html:not(.dark) .bg-purple-900 {
+            background-color: #ede9fe !important;
+        }
+
+        html:not(.dark) .bg-pink-900 {
+            background-color: #fce7f3 !important;
+        }
+
+        html:not(.dark) .bg-gradient-to-br {
+            background-image: linear-gradient(to bottom right, #dbeafe, #e2e8f0, #ede9fe) !important;
+        }
+
+        html:not(.dark) .border-indigo-800 {
+            border-color: #c7d2fe !important;
+        }
+
+        html:not(.dark) .border-indigo-500 {
+            border-color: #6366f1 !important;
+        }
+
+        html:not(.dark) .text-green-400 {
+            color: #15803d !important;
+        }
+    </style>
+
 
 </head>
 
