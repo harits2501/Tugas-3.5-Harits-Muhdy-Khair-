@@ -528,7 +528,22 @@
     </div>
 </footer>
 
-    
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function toggleTheme() {
+
+            document.documentElement.classList.toggle('dark');
+
+            if (document.documentElement.classList.contains('dark')) {
+                document.getElementById('themeButton').innerHTML = '☀';
+            } else {
+                document.getElementById('themeButton').innerHTML = '🌙';
+            }
+
+        }
+
+    </script>
 
 
 </body>
